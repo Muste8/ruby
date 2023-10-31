@@ -11,11 +11,9 @@ num = 1
 
 while num < 21
     if num % 2 == 0
-        puts num 
-        puts " Even"
+        puts "#{num} is Even"
     else
-        puts num 
-        puts " Odd"
+        puts "#{num} is Odd"
     end
     num += 1
 end
@@ -25,10 +23,8 @@ end
 #2 if loop
 for num in 1..20
     if num % 2 == 0
-        puts num 
-        puts " Even"
+        puts "#{num} is Even"
     else
-        puts num 
-        puts " Odd"
+        puts "#{num} is Odd"
     end
 end
