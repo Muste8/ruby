@@ -1,6 +1,6 @@
 #list of words
 
-words = ["level", "elephant", "madam", "ruby", "book", "racecar", "hello", "dad"]
+words = ["level", "elephant", "madam", "ruby", "book", "racecar", "hello", "dad", "bury"]
 
 x = words.length
 
@@ -36,6 +36,14 @@ for num in 0...x
         end
         puts "" # I'm using this as a line break!
     end
+end
+
+# here is my attempt at the stretch goal
+if words[3].chars.sort == words[-1].chars.sort
+    puts "Anagram Pairs:"
+    puts "#{words[3]} and #{words[-1]}"
+else 
+    puts "No anagram pairs!"
 end
 
             
