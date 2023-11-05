@@ -49,8 +49,8 @@ top_words = word_occurrence.sort_by { |word, count| -count }.first(10)
 =end
 puts "Most common word: '#{top_words[0][0]}' appears #{top_words[0][1]} times"
 puts "Top 10 most common words:"
-top_words.each_with_index do |(word, count), index|
-  puts "#{index + 1}. '#{word}' - #{count} times"
+top_words.each do |(word, count)|
+  puts "'#{word}' - #{count} times"
 end
 
 
