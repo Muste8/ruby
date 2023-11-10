@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :set_category
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "hod", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: "Hod", password: "secret", except: [:index, :show]
 
   def index
     @articles = @category.articles

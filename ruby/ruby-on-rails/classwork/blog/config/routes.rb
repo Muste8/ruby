@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   # Defines the root path route ("/")
-  root 'categories#index' # mainpage
+  root 'categories#index' # mainpage. The Rails router maps the root route to the index action of CategoriesController
   resources :categories do
     resources :articles do
       resources :comments

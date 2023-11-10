@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "hod", password: "secret", only: :destroy
+  http_basic_authenticate_with name: "Hod", password: "secret", only: :destroy
     def create
       @category = Category.find(params[:category_id])
       @article = Article.find(params[:article_id])
