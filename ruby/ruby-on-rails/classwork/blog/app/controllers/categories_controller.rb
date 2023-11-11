@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
     
     def update
       if @category.update(categories_params)
-        redirect_to category_articles_path(@category), notice: 'Category was successfully updated.'
+        redirect_to root_path, notice: 'Category was successfully updated.'
       else
         render :edit
       end
