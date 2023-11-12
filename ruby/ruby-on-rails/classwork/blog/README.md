@@ -1,50 +1,41 @@
+#Blog App README
+
+Welcome to the Blog App! This application provides a platform for creating, reading, updating, and deleting blog posts
 
 ## Table of Contents
 
-- [Blog App](#blog-app)
-- [Category Description Rake Task](#category-description-rake-task)
-- [CRUD Actions](#crud-actions)
-- [Category Count](#category-count)
-- [Style](#style)
-
-## Blog App
-
-This is a versatile blog app that seamlessly blends content creation and engagement. Explore articles thoughtfully organized into categories, and take charge of your experience by effortlessly managing articles and categories 
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
 
 
+## Introduction
 
-## Category Description Rake Task
+The Blog App is a web application built to streamline the process of managing blog posts. With a user-friendly interface, users can easily create, read, update, and delete their blog posts. The authentication system ensures that only authorized users can perform these actions.
 
-A Rake task has been added to backfill existing categories with descriptions. Perform this task  to ensure all categories have descriptions.
+## Features
+
+* CRUD Operations: Create, read, update, and delete blog posts effortlessly.
+
+* User Authentication: Secure user accounts with authentication to safeguard personal data.
+
+* Intuitive UI: An easy-to-use interface for efficient blog management.
+* Category Count: The number of Articles inside each category is displayed next to the category name.
+
+## Installation
+
+To run the Blog App locally, follow these steps:
+
+Step 1: Add a column to categories database with this command in the terminal
+```
+ $ bin/rails generate migration AddDescriptionToCategories description:string
+```
+Step 2: Backfill existing categories with description.
+
+Perform this task  to ensure all categories have descriptions.
 
 To run the Rake task, use the following command in the terminal inside your blog directory:
 
 ```bash
 rake db:add_descriptions
 ```
-
-## CRUD Actions
-
-### Create (C)
-
-Signed-in users can create a category. The view and form are included as partials for a seamless user experience.
-
-### Read (R)
-
-Users can view a category by navigating to `localhost:3000/categories/:id`. A dedicated view is available for easy category exploration.
-
-### Update (U)
-
-Signed-in users can edit a category. An edit button is provided on the category's show view.
-
-### Delete (D)
-
-Signed-in users can delete a category. A delete button is included on the category's show view.
-
-## Category Count
-
-The number of articles within each category is displayed next to the category name on the category index page.
-
-## Style
-
-The app is styled to be user friendly!
