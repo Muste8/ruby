@@ -1,15 +1,14 @@
 namespace :db do
-    desc "Add description to categories"
-    task add_descriptions: :environment do
-        category_desc = "description"
+  desc 'Add description to categories'
+  task add_descriptions: :environment do
 
-        category_ids = Category.pluck(:id)
+    categories = Category.all
 
-        category_ids.each do |category|
-            Category.find_or_create_by(description: desc)
-            puts "Description '#{name}' added."
-        end
-
-        puts "Categories desc added succesfully"
+    categories.each do |category|
+      category.update(description: "Description for #{category.name}")
+      puts "Description for '#{category.name}' added."
     end
+
+    puts 'Categories desc added succesfully'
+  end
 end

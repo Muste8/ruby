@@ -2,9 +2,9 @@
 
 class ArticlesController < ApplicationController
   before_action :set_category
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: %i[show edit update destroy]
 
-  http_basic_authenticate_with name: "Hod", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: 'hod', password: 'secret', except: %i[index show]
 
   def index
     @articles = @category.articles
@@ -60,7 +60,7 @@ class ArticlesController < ApplicationController
     # redirect_to root_path, status: :see_other
 
     @article.destroy
-    redirect_to category_articles_path(@category), notice: 'Article was successfully destroyed.'    
+    redirect_to category_articles_path(@category), notice: 'Article was successfully destroyed.'
   end
 
   private
