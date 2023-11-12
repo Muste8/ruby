@@ -4,6 +4,7 @@
 - [Blog App](#blog-app)
 - [Category Description Rake Task](#category-description-rake-task)
 - [CRUD Actions](#crud-actions)
+- [Category Count](#category-count)
 - [Style](#style)
 
 ## Blog App
@@ -39,6 +40,10 @@ Signed-in users can edit a category. An edit button is provided on the category'
 ### Delete (D)
 
 Signed-in users can delete a category. A delete button is included on the category's show view.
+
+## Category Count
+
+The number of articles within each category is displayed next to the category name on the category index page.
 
 ## Style
 
