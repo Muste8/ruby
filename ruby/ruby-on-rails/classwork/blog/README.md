@@ -26,8 +26,10 @@ The Blog App is a web application built to streamline the process of managing bl
 
 To run the Blog App locally, follow these steps:
 
+Before installing anything, follow the [ruby guides](https://guides.rubyonrails.org/getting_started.html#mvc-and-you) to help you create your own blog app. Once you've finished the guide and created a model for categories then you can follow along with this instructions!
+
 Step 1: Add a column to categories database with this command in the terminal
-```
+```bash
  $ bin/rails generate migration AddDescriptionToCategories description:string
 ```
 Step 2: Backfill existing categories with description.
