@@ -3,7 +3,7 @@
   <% @categories.each do |category| %>
     <li class = "container"><strong><%= link_to category.name, category_articles_path(category) %></strong>:  
     <% count = category.articles.count %> 
-    <%= "#{count} #{count > 1 ? 'articles' : 'article'}" %>
+    <%= "#{count} #{count == 1 ? 'article' : 'articles'}" %>
     <br> <em> <%= category.description %> </em></li>
   <% end %>
 </ul>
