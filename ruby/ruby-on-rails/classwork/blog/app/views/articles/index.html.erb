@@ -12,11 +12,11 @@ Our blog has <%= Article.public_count %> articles and counting!
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_category_article_path(@category) %>
+<%= link_to "New Article", new_category_article_path(@category), class:"btn btn-primary btn btn-primary btn-sm" %>
 <br>
-<%= link_to "Edit Category", edit_category_path(@category) %>
+<%= link_to "Edit Category", edit_category_path(@category), class:"btn btn-warning btn btn-primary btn-sm" %>
 <br>
 <%= link_to "Delete Category", category_path(@category), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
-  } %>
+  }, class:"btn btn-danger btn btn-primary btn-sm" %>

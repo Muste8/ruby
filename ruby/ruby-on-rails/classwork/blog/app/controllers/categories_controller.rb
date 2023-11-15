@@ -45,9 +45,6 @@ class CategoriesController < ApplicationController
     redirect_to root_path, notice: 'Article was successfully destroyed.'
   end
 
-  # def article_count
-  #   articles.count
-  # end
 
   private
 
