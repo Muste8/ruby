@@ -18,7 +18,7 @@ class DonationsController < ApplicationController
 
     flash[:success] = 'Thank you for your donation!'
     redirect_to root_path
-    rescue Stripe::CardError => e
+  rescue Stripe::CardError => e
     flash[:error] = e.message
     render :new
   end
