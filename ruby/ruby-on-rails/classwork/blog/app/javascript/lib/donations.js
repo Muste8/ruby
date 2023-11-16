@@ -1,11 +1,11 @@
-import $ from 'jquery';
+require('dotenv').config()
 
 
-$(document).ready(() => {
-    // This function runs when the DOM is fully loaded
-  
+$(function(){
+    console.log("is this working?")
+
     // Initializing Stripe with your public API key
-    const stripe = Stripe("<%= ENV['STRIPE_PUBLIC_KEY'] %>");
+    const stripe = Stripe("pk_test_51OCmJ1ESrM4bBPsU7XuZqd0N2xgU9sXbOld0sWaHSYgnlgQt9qAD2BP7yFP27gOzwJ3jP2ypcvYefQBcqdPex0zC00fYkDs9XH");
     
     // Creating an instance of the Stripe Elements library
     const elements = stripe.elements();
