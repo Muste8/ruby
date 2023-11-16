@@ -3,17 +3,17 @@
 <%= form_with(model: @donation, url: donations_path, method: 'post', local: true, id: 'donation-form') do |form| %>
 
     <div class="field form-group">
-        <%= form.text_field :first_name, placeholder:"First Name", class:"form-control", required: true %>
+        <%= form.text_field :first_name, placeholder:"First Name", class:"form-control" %>
     </div>
 
     <div class="field form-group">
-        <%= form.text_field :last_name, placeholder:"Last Name", class:"form-control", required: true %>
+        <%= form.text_field :last_name, placeholder:"Last Name", class:"form-control" %>
     </div>
     <div class="field form-group">
-        <%= form.text_field :email, placeholder:"Email", class:"form-control", required: true %>
+        <%= form.text_field :email, placeholder:"Email", class:"form-control" %>
     </div>
     <div class="field form-group">
-        <%= form.text_field :amount, placeholder:"Amount", class:"form-control", required: true %>
+        <%= form.text_field :amount, placeholder:"Amount", class:"form-control" %>
     </div>
     <div id="card-container">
         <div id="card-element" class="form-control"> </div>
