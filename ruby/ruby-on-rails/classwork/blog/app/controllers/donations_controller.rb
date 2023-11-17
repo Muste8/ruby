@@ -11,14 +11,14 @@ class DonationsController < ApplicationController
       amount: @donation.amount * 100, #convert to cents
       currency: 'usd',
       source: params[:stripe_token],
-      description: 'Donation',
+      description: 'Donation'
     })
 
     @donation.save
 
     flash[:success] = 'Thank you for your donation!'
     redirect_to root_path
-  rescue Stripe::CardError => e
+    rescue Stripe::CardError => e
     flash[:error] = e.message
     render :new
   end

@@ -4,7 +4,6 @@ require('dotenv').config()
 $(function(){
     // Initializing Stripe with your public API key
     const public_key = process.env.STRIPE_PUBLIC_KEY;
-    
     const stripe = Stripe(public_key);
     
     // Creating an instance of the Stripe Elements library
