@@ -14,9 +14,3 @@ Our blog has <%= Article.public_count %> articles and counting!
 
 <%= link_to "New Article", new_category_article_path(@category) %>
 <br>
-<%= link_to "Edit Category", edit_category_path(@category) %>
-<br>
-<%= link_to "Delete Category", category_path(@category), data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-  } %>
