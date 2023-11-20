@@ -2,13 +2,13 @@
 
 <p><%= @article.body %></p>
 <p><strong>Category:</strong> <%= @article.category.name %></p>
-<ul>
-  <li><%= link_to "Edit", edit_category_article_path(@category, @article) %></li>
-  <li><%= link_to "Delete", category_article_path(@category), data: {
+
+  <%= link_to "Edit", edit_category_article_path(@category, @article), class:"btn btn-dark"  %> |
+  <%= link_to "Delete", category_article_path(@category), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
-  } %></li>
-</ul>
+  }, class:"btn btn-danger"  %>
+
 
 <h2>Comments</h2>
 <%= render @article.comments %>

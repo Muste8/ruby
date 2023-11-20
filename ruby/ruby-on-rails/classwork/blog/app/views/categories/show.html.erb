@@ -1,11 +1,11 @@
 <br><h1><%= @category.name %></h1>
 
 <p><%= @category.description %></p>
-<%= link_to "Edit", edit_category_path(@category) %> |
+<%= link_to "Edit", edit_category_path(@category), class:"btn btn-dark"  %> |
 <%= link_to "Delete", category_path(@category), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
-  } %>
+  }, class:"btn btn-danger"  %>
 <br><br>
 <h2><%= @category.name %> Articles</h1>
 
@@ -19,4 +19,4 @@
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_category_article_path(@category) %>
+<%= link_to "New Article", new_category_article_path(@category), class:"btn btn-dark"  %>
