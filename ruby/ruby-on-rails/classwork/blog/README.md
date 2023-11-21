@@ -1,4 +1,4 @@
-#Blog App README
+# Blog App README
 
 Welcome to the Blog App! This application provides a platform for creating, reading, updating, and deleting blog posts
 
@@ -22,7 +22,7 @@ The Blog App is a web application built to streamline the process of managing bl
 * Intuitive UI: An easy-to-use interface for efficient blog management.
 * Category Count: The number of Articles inside each category is displayed next to the category name.
 
-## Installation
+## Getting Started
 
 To run the Blog App locally, follow these steps:
 

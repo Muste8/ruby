@@ -10,7 +10,7 @@
 <h2><%= @category.name %> Articles</h1>
 
 <ul>
-  <% @articles.each do |article| %>
+  <% @category.articles.each do |article| %>
     <% unless article.archived? %>
       <li>
         <%= link_to article.title, category_article_path(article.category, article) %>

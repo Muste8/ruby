@@ -6,8 +6,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category
-    @articles = @category.articles
   end
 
   def new
