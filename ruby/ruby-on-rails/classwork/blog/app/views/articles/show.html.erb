@@ -11,8 +11,9 @@
 
 
 <h2>Comments</h2>
-<button id="load-comments">Load Comments</button>
-<%= render @article.comments %>
+<div id="category-id" data-category="<%= @category.id %>"></div>
+<button id="load-comments" data-article="<%=@article.id%>">Load Comments</button>
+<div id="comments"></div>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
