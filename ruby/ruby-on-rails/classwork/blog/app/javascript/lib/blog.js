@@ -27,15 +27,27 @@ $(function(){
         $.getJSON(url, function(data){
             console.log(data)
             // Append the new comments to the container #comments
-            var isEmpty = $('#comments').html() === "";
+            const isEmpty = $('#comments').html() === "";
             if (isEmpty){
                 for(let i = 0; i < data.length; i++){
                     // I didn't have a container called #comments. So I created one.
-                    $('#comments').append(`<strong>commenter:</strong> ${data[i].commenter}<br><strong>body:</strong> ${data[i].body}<br>`);
+                    $('#comments').append(`<strong>commenter:</strong> ${data[i].commenter}<br><strong>body:</strong> ${data[i].body}<br><button class='like'>Like</button><span id='counter'></span><br>`);
                 };
             };
-
-            // add .fail callback to handle error messaging
         })
+        // add .fail callback to handle error messaging
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            // Failure: Handle the error here
+            console.error('Error:', textStatus, errorThrown);
+        });
     });
+    // like button for comments
+    let count = 0;
+
+    $('.like').each(function() {
+        $(this).on('click', function() {
+            count ++;
+            $('#counter').append(count);
+        });
+    });   
 });
