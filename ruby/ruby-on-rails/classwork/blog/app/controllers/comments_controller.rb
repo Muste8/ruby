@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  
+  before_action :authenticate_user!, only: %i[destroy]
   def index
     @comments = Comment.where(article_id: params[:article_id])
     render json: @comments
