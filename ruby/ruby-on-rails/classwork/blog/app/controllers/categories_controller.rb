@@ -1,6 +1,5 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[edit show update destroy]
-  http_basic_authenticate_with name: 'hod', password: 'secret', except: %i[index]
   def index
     @categories = Category.all
   end
